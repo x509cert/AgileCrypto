@@ -67,10 +67,7 @@ namespace AgileCrypto_PoC
         /// </summary>
         /// <param name="o">Object to convert</param>
         /// <returns>Byte value of object</returns>
-        private byte ObjToByte(object o)
-        {
-            return Convert.ToByte(o);
-        }
+        private byte ObjToByte(object o) => Convert.ToByte(o);
 
         /// <summary>
         /// Removes the key from a JSON string
@@ -91,8 +88,6 @@ namespace AgileCrypto_PoC
         /// <returns></returns>
         static string FormatJson(string json)
         {
-            return json;
-
             int indentation = 0;
             int quoteCount = 0;
             var result =
