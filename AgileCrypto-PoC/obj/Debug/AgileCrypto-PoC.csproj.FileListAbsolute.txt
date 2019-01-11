@@ -1,0 +1,7 @@
+C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\bin\Debug\AgileCrypto-PoC.exe.config
+C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\bin\Debug\AgileCrypto-PoC.exe
+C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\bin\Debug\AgileCrypto-PoC.pdb
+C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\obj\Debug\AgileCrypto-PoC.csprojAssemblyReference.cache
+C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\obj\Debug\AgileCrypto-PoC.csproj.CoreCompileInputs.cache
+C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\obj\Debug\AgileCrypto-PoC.exe
+C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\obj\Debug\AgileCrypto-PoC.pdb
