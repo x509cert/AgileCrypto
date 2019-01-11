@@ -1,0 +1,5 @@
+System.Security.Cryptography.Rfc2898DeriveBytes|{"IterationCount":1000,"Salt":[160,198,113,246,142,146,56,203,125,115,57,87,131,32,47,52,21,208,205,56,34,76,62,223,118,54,189,234,233,119,214,8]}
+System.Security.Cryptography.DESCryptoServiceProvider|{"BlockSize":64,"IV":[99,124,81,134,216,175,130,188],"KeySize":64,"Mode":4,"Padding":2}
+System.Security.Cryptography.HMACSHA1|{"HashName":"SHA1","HashSize":160,"Hash":[169,44,133,104,142,89,24,160,65,210,142,236,51,230,59,83,66,53,192,186]}
+np+givlxYbQ=
+qSyFaI5ZGKBB0o7sM+Y7U0I1wLo=

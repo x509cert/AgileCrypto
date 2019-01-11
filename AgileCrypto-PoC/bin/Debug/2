@@ -1,0 +1,5 @@
+System.Security.Cryptography.Rfc2898DeriveBytes|{"IterationCount":1000,"Salt":[63,116,137,8,170,183,2,115,246,85,44,129,232,36,8,166,202,193,124,96,207,202,55,71,159,80,207,253,233,119,214,8]}
+System.Security.Cryptography.AesCryptoServiceProvider|{"KeySize":128,"BlockSize":128,"IV":[32,74,181,23,13,38,238,159,190,212,247,237,113,179,192,200],"Mode":1,"Padding":2}
+System.Security.Cryptography.HMACSHA256|{"HashName":"SHA256","HashSize":256,"Hash":[173,122,66,130,244,224,170,116,175,209,87,207,196,234,13,242,55,105,15,233,109,55,140,83,130,145,122,164,67,95,81,159]}
+AyBqsdZYtauH/sHlANsoxQ==
+rXpCgvTgqnSv0VfPxOoN8jdpD+ltN4xTgpF6pENfUZ8=

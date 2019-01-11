@@ -4,3 +4,6 @@ C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\bin\Debug\ACrypto.exe
 C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\bin\Debug\ACrypto.pdb
 C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\obj\Debug\ACrypto.exe
 C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\obj\Debug\ACrypto.pdb
+C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\bin\Debug\Newtonsoft.Json.dll
+C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\bin\Debug\Newtonsoft.Json.xml
+C:\Users\mikehow\source\repos\AgileCrypto\AgileCrypto-PoC\obj\Debug\AgileCrypto-PoC.csproj.CopyComplete

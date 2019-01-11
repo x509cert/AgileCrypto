@@ -5,6 +5,7 @@ using System.Security.Cryptography;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Web.Script.Serialization;
+using Newtonsoft.Json.Linq;
 
 namespace AgileCrypto_PoC
 {
@@ -70,39 +71,18 @@ namespace AgileCrypto_PoC
         private byte ObjToByte(object o) => Convert.ToByte(o);
 
         /// <summary>
-        /// Removes the key from a JSON string
+        /// Removes useless stuff from a JSON string
         /// </summary>
         /// <param name="json">JSON input</param>
         /// <returns>Cleansed string</returns>
-        private static string RemoveKeyFromJson(string json)
+        private static string RemoveJunkFromJson(string json)
         {
-            return (new Regex("\"Key\":\\[.+?\\],", RegexOptions.None)).Replace(json, "");
-        }
+            dynamic jo = JObject.Parse(json);
+            string[] remove = { "Key", "LegalBlockSizes", "LegalKeySizes", "FeedbackSize", "InputBlockSize", "OutputBlockSize", "CanTransformMultipleBlocks", "CanReuseTransform" };
+            foreach(string r in remove)
+                jo.Remove(r);
 
-        private const string INDENT_STRING = "    ";
-
-        /// <summary>
-        /// Beutifies JSON
-        /// </summary>
-        /// <param name="json"></param>
-        /// <returns></returns>
-        static string FormatJson(string json)
-        {
-            int indentation = 0;
-            int quoteCount = 0;
-            var result =
-                from ch in json
-                let quotes = ch == '"' ? quoteCount++ : quoteCount
-                let lineBreak = ch == ',' && quotes % 2 == 0 ? ch + Environment.NewLine + String.Concat(Enumerable.Repeat(INDENT_STRING, indentation)) : null
-                let openChar = ch == '{' || ch == '[' ? ch + Environment.NewLine + String.Concat(Enumerable.Repeat(INDENT_STRING, ++indentation)) : ch.ToString()
-                let closeChar = ch == '}' || ch == ']' ? Environment.NewLine + String.Concat(Enumerable.Repeat(INDENT_STRING, --indentation)) + ch : ch.ToString()
-                select lineBreak == null
-                            ? openChar.Length > 1
-                                ? openChar
-                                : closeChar
-                            : lineBreak;
-
-            return String.Concat(result);
+            return Regex.Replace(jo.ToString(), "(\"(?:[^\"\\\\]|\\\\.)*\")|\\s+", "$1");
         }
 
         /// <summary>
@@ -219,9 +199,9 @@ namespace AgileCrypto_PoC
             //_hmac.Key = new byte[_hmac.Key.Length];
 
             // serialize the ciphertext/HMAC/PKBDF
-            string sJsonSym = FormatJson(RemoveKeyFromJson(oSerializer.Serialize(_sym)));
-            string sJsonHmac = FormatJson(RemoveKeyFromJson(oSerializer.Serialize(_hmac)));
-            string sJsonPbkdf = FormatJson(oSerializer.Serialize(_pbkdf));
+            string sJsonSym = RemoveJunkFromJson(oSerializer.Serialize(_sym));
+            string sJsonHmac = RemoveJunkFromJson(oSerializer.Serialize(_hmac));
+            string sJsonPbkdf = oSerializer.Serialize(_pbkdf);
 
             // build the resulting cipherblob string
             var sb = new StringBuilder();
