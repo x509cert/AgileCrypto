@@ -26,8 +26,7 @@ If the MAC over the ciphertext check fails, the data is not decrypted and an exc
 - A basic understanding of crypto is assumed.
 - The code uses .NET 4.x and the appropriate libraries are already installed on the user&#39;s machine.
 - The code has not been tested with every possible combination of symmetric cipher x block mode x key size x padding mode.
--
-The class names are .NET specific – this could not allow interop with Java or Python.1
+- The class names are .NET specific – this could not allow interop with Java or Python.1
 - The code is not particularly robust, it&#39;s a PoC!
 - The code assumes there&#39;s a class factory that allows crypto objects to be created at runtime based on their names.
 - The code only works with symmetric algs.
