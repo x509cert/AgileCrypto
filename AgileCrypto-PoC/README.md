@@ -109,7 +109,7 @@ We have changed a lot; we changed the cipher (DES -> AES), the PBKDF iteration c
 
 Now re-run the tool to encrypt the data **(redirect to 2.enc, not 1.enc)**:
 
-`acrypto encrypt Merlin! "Hello, Agile Crypto World!" \&gt; 2.enc`
+` acrypto encrypt Merlin! "Hello, Agile Crypto World!" > 2.enc`
 
 If you look at the resulting file, you';ll see that it looks quite different from 1.enc because we changed so much. Note espically that the MAC is huge (SHA512) compared to the previous example (SHA256.)
 
@@ -117,7 +117,7 @@ Finally, the ultimate test – decrypting both blobs with the same code and no c
 
 Simply type the following, one after the other and witness the result:
 
-`acrypto decrypt Merlin! 1.enc
+` acrypto decrypt Merlin! 1.enc
 
 acrypto decrypt Merlin! 2.enc`
 
