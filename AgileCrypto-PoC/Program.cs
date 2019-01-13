@@ -7,7 +7,7 @@ internal class Test
 {
     private static void Usage()
     {
-        Console.WriteLine("Usage for Agile Crypto v1.50");
+        Console.WriteLine("Usage for Agile Crypto v1.51");
         Console.WriteLine("\t ACrypto encrypt <passphrase> <plaintext>");
         Console.WriteLine("\t ACrypto decrypt <passphrase> <filename>");
         Environment.Exit(-1);
